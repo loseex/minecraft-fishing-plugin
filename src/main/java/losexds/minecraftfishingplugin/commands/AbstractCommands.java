@@ -6,7 +6,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class AbstractCommands implements CommandExecutor {
-
     public AbstractCommands (String command) {
         PluginCommand pluginCommand = MinecraftFishingPlugin.getInstance().getCommand(command);
         if (pluginCommand != null) {

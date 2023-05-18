@@ -1,14 +1,23 @@
 
 # 18.05.2023
 
-messages:
-  prefix: "\u00A7bFishing \u00A7e| \u00A7r"
-  join: "Hello! Change plugin config!"
-  permission: "You don't have permissions!"
-  reload: "fishing plugin reloaded."
-
 database:
   host:
   user:
   password:
   table:
+
+
+settings:
+  # Можно рыбачить только на пляже (standard: true).
+  fishingOnlyOnBeach: true
+
+
+
+messages:
+  prefix: "\u00A7bFishing \u00A7e| \u00A7r"
+  join: "Hello! Change plugin config!"
+  permission: "You don't have permissions!"
+  alert: "Найдите пляж для рыбалки!"
+  reload: "fishing plugin reloaded."
+  crush: "Вы упустили рыбу!"

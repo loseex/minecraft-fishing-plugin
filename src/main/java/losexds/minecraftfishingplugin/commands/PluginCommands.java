@@ -4,6 +4,8 @@ import losexds.minecraftfishingplugin.MinecraftFishingPlugin;
 import losexds.minecraftfishingplugin.utils.Utils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.inventory.ItemStack;
 
 public class PluginCommands extends AbstractCommands {
     public PluginCommands() {
@@ -41,6 +43,17 @@ public class PluginCommands extends AbstractCommands {
         if (args[0].equalsIgnoreCase("stats")) {
             String user = sender.getName();
             return;
+        }
+
+        if (args[0].equalsIgnoreCase("list")) {
+            ConfigurationSection section = (ConfigurationSection) MinecraftFishingPlugin.getStorage().getConfig().getItemStack("items");
+            if (section == null) return;
+
+            for(String key : section.getKeys(false)) {
+                ItemStack items = MinecraftFishingPlugin.getStorage().getConfig().getItemStack("items");
+                if (items == null) return;
+                System.out.println(items);
+            }
         }
 
 

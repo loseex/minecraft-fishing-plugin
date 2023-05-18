@@ -10,4 +10,4 @@ commands:
   fishing:
     usage: "fishing"
     aliases: "fish"
-    description: "Use this pls :)"
+    description: "Main Plugin Command"
