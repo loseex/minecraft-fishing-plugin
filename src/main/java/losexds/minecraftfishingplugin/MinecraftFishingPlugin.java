@@ -1,5 +1,6 @@
 package losexds.minecraftfishingplugin;
 
+import losexds.minecraftfishingplugin.listener.EventsListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 

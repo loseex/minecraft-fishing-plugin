@@ -2,7 +2,10 @@
 # 18.05.2023
 
 messages:
-  join: "Привет!"
+  prefix: "\u00A7bFishing \u00A7e| \u00A7r"
+  join: "Hello! Change plugin config!"
+  permission: "You don't have permissions!"
+  reload: "fishing plugin reloaded."
 
 database:
   host:
