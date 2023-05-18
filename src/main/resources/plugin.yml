@@ -1,0 +1,13 @@
+name: MinecraftFishingPlugin
+version: '${project.version}'
+main: losexds.minecraftfishingplugin.MinecraftFishingPlugin
+api-version: 1.19
+softdepend: [ Vault ]
+authors: [ losexds ]
+description: Minecraft fishing plugin
+website: https://github.com/losexds/minecraft-fishing-plugin
+commands:
+  fishing:
+    usage: "fishing"
+    aliases: "fish"
+    description: "Use this pls :)"

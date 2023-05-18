@@ -1,0 +1,11 @@
+
+# 18.05.2023
+
+messages:
+  join: "Привет!"
+
+database:
+  host:
+  user:
+  password:
+  table:
