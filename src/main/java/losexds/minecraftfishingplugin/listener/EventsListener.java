@@ -4,15 +4,12 @@ import losexds.minecraftfishingplugin.MinecraftFishingPlugin;
 import losexds.minecraftfishingplugin.utils.GiveLootPlayer;
 import losexds.minecraftfishingplugin.utils.Utils;
 
-import losexds.minecraftfishingplugin.utils.СalculationSystem;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerFishEvent;
-import org.bukkit.inventory.ItemStack;
-
 
 public class EventsListener implements Listener {
     @EventHandler
@@ -37,14 +34,12 @@ public class EventsListener implements Listener {
         // Успех
         if (e.getState() == PlayerFishEvent.State.CAUGHT_FISH) {
             e.getCaught().remove();
-            GiveLootPlayer.give(e.getPlayer());
-            Utils.sendActionBar(e.getPlayer(), ChatColor.GREEN + "+" + СalculationSystem.Calculation(1, e.getPlayer().getLevel()) + " xp");
+            GiveLootPlayer.giveItem(e.getPlayer());
         }
 
         // Провал
         if (e.getState() == PlayerFishEvent.State.FAILED_ATTEMPT) {
             e.getPlayer().sendMessage(ChatColor.RED + Utils.readConfig("messages.crush"));
-            Utils.sendActionBar(e.getPlayer(), ChatColor.RED + "-" + СalculationSystem.Calculation(1, e.getPlayer().getLevel()) + " xp");
         }
     }
 }

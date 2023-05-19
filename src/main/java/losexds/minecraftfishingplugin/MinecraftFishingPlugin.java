@@ -8,14 +8,14 @@ import losexds.minecraftfishingplugin.commands.PluginCommands;
 
 public final class MinecraftFishingPlugin extends JavaPlugin {
     private static MinecraftFishingPlugin instance;
-    private Storage storage;
+    private Storage items;
 
     @Override
     public void onEnable() {
         instance = this;
 
         saveDefaultConfig();
-        storage = new Storage("items.yml");
+        items = new Storage("items.yml");
 
         new PluginCommands();
 
@@ -28,6 +28,6 @@ public final class MinecraftFishingPlugin extends JavaPlugin {
     public static MinecraftFishingPlugin getInstance() {return instance;}
 
     public static Storage getStorage() {
-        return instance.storage;
+        return instance.items;
     }
 }

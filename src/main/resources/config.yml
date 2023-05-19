@@ -9,8 +9,8 @@ database:
 
 
 settings:
-  # Можно рыбачить только на пляже (standard: true).
-  fishingOnlyOnBeach: true
+  # Можно рыбачить только на пляже, либо в океане (standard: false).
+  fishingOnlyOnBeach: false
 
 
 
